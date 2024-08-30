@@ -30,14 +30,7 @@ const Root: React.FC = function () {
           <FontAwesomeIcon icon={faArrowLeft} />
         </Link>
         <p className="text-white font-bold text-2xl">{header}</p>
-        <Link
-          to={"/create"}
-          className={`flex items-center justify-center bg-[#ffffff9f] p-3 rounded-full ${
-            pathname !== "/" && "invisible"
-          }`}
-        >
-          {pathname === "/" ? <FontAwesomeIcon icon={faPlus} /> : " "}
-        </Link>
+        <p></p>
       </div>
       <div className="w-full h-full">
         <Outlet />

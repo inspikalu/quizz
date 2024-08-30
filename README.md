@@ -1,50 +1,85 @@
-# React + TypeScript + Vite
+# Quizz Manager Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The **Quizz Application** is a web-based platform that allows managers to create quizzes that others can join and participate in. This application is designed to facilitate fun and interactive quiz sessions within teams, classrooms, or social groups. Managers can easily set up quizzes, invite participants, and track results in real-time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Create Quizzes:** Managers can create quizzes with multiple-choice questions.
+- **Join Quizzes:** Participants can join quizzes via a unique code.
+- **Real-time Results:** See results and scores immediately after the quiz.
+- **User-friendly Interface:** Designed for ease of use for both quiz creators and participants.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend:** [React.js](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/)
+- **Backend:** [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)
+- **Database:** [MongoDB](https://www.mongodb.com/)
+- **Real-time Communication:** [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+- **Deployment:** [Vercel](https://vercel.com/),
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/inspikalu/quizz.git
+   cd quizz
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the application:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the application in your browser:**
+   ```
+   http://localhost:3000
+   ```
+
+## Usage
+
+### As a Manager:
+1. **Sign up** or **log in** to your account.
+2. **Create a new quiz** by providing a title, description, and multiple-choice questions.
+3. **Invite participants** to join the quiz by sharing the unique quiz code.
+4. **Start the quiz** and view real-time results as participants submit their answers.
+
+### As a Participant:
+1. **Sign up** or **log in** to your account.
+2. **Join a quiz** by entering the unique quiz code provided by the manager.
+3. **Answer the questions** presented in the quiz.
+4. **Submit your answers** and view your score once the quiz is complete.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. **Fork the repository.**
+2. **Create a new branch** for your feature or bugfix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit your changes:**
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. **Push to the branch:**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Open a pull request.**
+
+
+## Contact
+
+For any questions or suggestions, feel free to reach out to:
+
+- **Email:** [inspikalu@gmail.com](mailto:inspikalu@gmail.com)
+- **GitHub:** [inspikalu](https://github.com/inspikalu)

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "./components/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
@@ -58,9 +58,9 @@ function App() {
           </form>
         </section>
       </Modal>
-      <section className="h-full flex flex-col items-center">
+      <section className="h-full flex flex-row mt-auto items-center justify-center gap-3">
         <button
-          className="mt-auto bg-light_green-300 text-white py-3 px-6 rounded-lg hover:bg-secondary"
+          className=" bg-light_green-300 text-white py-3 px-6 rounded-lg hover:bg-secondary"
           style={{
             boxShadow: "0px 5px 2px #1d7822",
           }}
@@ -68,6 +68,15 @@ function App() {
         >
           Join Quiz
         </button>
+        <Link
+          to={"/create"}
+          className="bg-light_green-300 text-white py-3 px-6 rounded-lg hover:bg-secondary"
+          style={{
+            boxShadow: "0px 5px 2px #1d7822",
+          }}
+        >
+          Create Quiz
+        </Link>
       </section>
     </>
   );

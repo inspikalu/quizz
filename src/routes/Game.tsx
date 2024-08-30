@@ -65,7 +65,7 @@ const Game = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1>Game ID: {id}</h1>
+      <h1 className="text-white">Game ID: {id}</h1>
       {questions.length > 0 &&
         questions.map((item, index) => (
           <div
